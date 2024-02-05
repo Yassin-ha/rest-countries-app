@@ -6,9 +6,11 @@ const Cart = ({ name, flags, population, region, capital }) => {
   const countryName = name.common;
   // eslint-disable-next-line react/prop-types
   const countryFlag = flags.png;
+  // eslint-disable-next-line react/prop-types
+  const officialName = name.official;
 
   return (
-    <Link to={`/country/${countryName}`}>
+    <Link to={`/country/${officialName}`}>
       <article className="border-2 rounded-md overflow-hidden cursor-pointer mx-4 dark:border-none dark:bg-darkBlue ">
         <img src={countryFlag} alt="flag" className="w-full lg:h-44" />
         <div className="p-4">

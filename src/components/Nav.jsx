@@ -6,7 +6,7 @@ const Nav = ({ toggleTheme, dark }) => {
   return (
     <nav className="py-6 dark:bg-darkBlue dark:text-white dark:border-none border-b-2 h-20 ">
       <div className="container mx-auto flex justify-between">
-        <h1 className="text-xl font-bold">Where in the world?</h1>
+        <h1 className="font-bold lg:text-xl">Where in the world?</h1>
         <button className="flex gap-2 items-center" onClick={() => toggleTheme()}>
           {dark ? (
             <>

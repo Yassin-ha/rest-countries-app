@@ -35,7 +35,9 @@ const Home = () => {
     setRegion(e.target.value);
   };
 
+  // search 
   useEffect(() => {
+
     const fetchCountry = async () => {
       setLoading(true);
       const resp = await fetch(`https://restcountries.com/v3.1/name/${search}`);
@@ -50,6 +52,7 @@ const Home = () => {
     }
   }, [search]);
 
+  // filter 
   useEffect(() => {
     if (region === "All") {
       setCountries(data);
@@ -77,7 +80,7 @@ const Home = () => {
             name="region"
             id="region-select"
             onChange={handleChangeRegion}
-            className="outline-none w-full dark:bg-darkBlue"
+            className="outline-none w-full bg-white dark:bg-darkBlue"
           >
             <option value="All">Filter by Region</option>
             <option value="Africa">Africa</option>
